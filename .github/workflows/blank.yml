@@ -46,11 +46,10 @@ jobs:
           title: ${{ github.run_id }}
           files: |
             ./app/build/outputs/apk/release/*.apk
-      
-      
-      
-      
-      
-      
-      
-       run: ./gradlew assembleRelease
+            
+            
+            
+            
+            
+            
+ 
