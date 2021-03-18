@@ -35,3 +35,22 @@ jobs:
       # 执行编译脚本
       - name: Build project
         run: ./gradlew assembleRelease
+
+      # 发布 Release
+      - name: Release
+        uses: marvinpinto/action-automatic-releases@latest
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: ${{ github.run_id }}
+          prerelease: false
+          title: ${{ github.run_id }}
+          files: |
+            ./app/build/outputs/apk/release/*.apk
+      
+      
+      
+      
+      
+      
+      
+       run: ./gradlew assembleRelease
